@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 
+
 // SLICE VECTOR
 template <class T>
 std::vector<T> slice_vector(int start, int end, std::vector<T> &vec)
