@@ -21,7 +21,6 @@ class IntCode():
     def run(self, id, stop4=False, i_rep=False, idle=False, wait=False):
         while not self.halt:
             op = self.line[self.ip]
-            #print(self.ip, op, id)
 
             if op == 99:
                 self.halt = True
@@ -36,6 +35,8 @@ class IntCode():
             b = self.ip + 2 if modes[1] == 1 else (self.relative_base + self.line[self.ip + 2]) if modes[1] == 2 else self.line[self.ip + 2]
             c = self.ip + 3 if modes[0] == 1 else (self.relative_base + self.line[self.ip + 3]) if modes[0] == 2 else self.line[self.ip + 3]
 
+            # print(self.ip, op, id, "a-b-c", a,b,c)
+            # input()
             if op == 1:
                 self.line[c] = self.line[a] + self.line[b]
                 self.ip += 4
@@ -48,6 +49,7 @@ class IntCode():
                 #1
                 if i_rep:                       # recursive take 2nd element (day 7)
                     if self.input_process == 0:
+                        
                         self.line[a] = id[0]
                         self.input_process += 1
                     else: self.line[a] = id[self.input_process]

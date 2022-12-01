@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <map>
 
 
 // SLICE VECTOR
@@ -38,4 +39,17 @@ int find_max(std::vector<int> matrix)
     }
     return max;
     
+}
+
+
+
+// Sprt Vector of Pairs
+bool sort_by_second(const std::pair<int, int> &a, const std::pair<int, int> &b)
+{
+    return (a.second > b.second);
+}
+
+bool sort_by_first(const std::pair<int, int> &a, const std::pair<int, int> &b)
+{
+    return (a.first > b.first);
 }
