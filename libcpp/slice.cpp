@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 #include <string>
 #include <vector>
 #include <map>
@@ -43,7 +44,7 @@ int find_max(std::vector<int> matrix)
 
 
 
-// Sprt Vector of Pairs
+// Sort Vector of Pairs
 bool sort_by_second(const std::pair<int, int> &a, const std::pair<int, int> &b)
 {
     return (a.second > b.second);
@@ -52,4 +53,20 @@ bool sort_by_second(const std::pair<int, int> &a, const std::pair<int, int> &b)
 bool sort_by_first(const std::pair<int, int> &a, const std::pair<int, int> &b)
 {
     return (a.first > b.first);
+}
+
+
+
+// Print max key/value of map by value
+void max_pair_by_value(std::map<int, int> &maps)
+{
+    auto ptr = std::max_element
+    (
+        maps.begin(), maps.end(), 
+        [](const std::pair<int, int> &a, const std::pair<int, int> &b) {
+            return (a.second < b.second);
+            }
+        );
+    
+    std::cout << ptr->first << ' ' << ptr->second;
 }
