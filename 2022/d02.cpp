@@ -4,10 +4,6 @@
 #include <vector>
 
 #include "../libcpp/io.cpp"
-#include "../libcpp/slice.cpp"
-#include "../libcpp/parse.cpp"
-#include "../libcpp/grids.cpp"
-#include "../libcpp/convert.cpp"
 
 using vector_str = std::vector<std::string>;
 using vector_int = std::vector<int>;
