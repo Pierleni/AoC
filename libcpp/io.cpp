@@ -17,11 +17,23 @@ std::vector<std::string> import_file(std::string path)
 }
 
 
-// PRINT
+// PRINT VECTOR
 template <class T>
 void show_content(std::vector<T> file)
 {
     for (auto f : file) {
         std::cout << f << std::endl;
     }
+}
+
+
+// PRINT STRING
+void prints(std::string word, char c=' ') 
+{
+    std::cout << word << c;
+}
+// PRINT INTEGER
+void printi(int n, char c=' ')
+{
+    std::cout << n << c;
 }
