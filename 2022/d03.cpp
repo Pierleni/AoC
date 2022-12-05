@@ -1,17 +1,10 @@
 #include <iostream>
-#include <sstream>
-#include <fstream>
 #include <vector>
-#include <string>
 #include <set>
 
 #include "../libcpp/io.cpp"
 
 using vector_str = std::vector<std::string>;
-using vector_int = std::vector<int>;
-using vector_char = std::vector<char>;
-using vector_float = std::vector<float>;
-
 
 int find_duplicates(std::string line, std::set<char> container) 
 {

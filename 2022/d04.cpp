@@ -1,6 +1,4 @@
 #include <iostream>
-#include <sstream>
-#include <fstream>
 #include <vector>
 
 #include "../libcpp/io.cpp"
@@ -8,9 +6,6 @@
 #include "../libcpp/convert.cpp"
 
 using vector_str = std::vector<std::string>;
-using vector_int = std::vector<int>;
-using vector_char = std::vector<char>;
-using vector_float = std::vector<float>;
 
 #include <map>
 

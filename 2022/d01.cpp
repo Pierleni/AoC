@@ -1,6 +1,4 @@
 #include <iostream>
-#include <sstream>
-#include <fstream>
 #include <vector>
 
 #include "../libcpp/io.cpp"
@@ -8,8 +6,6 @@
 
 using vector_str = std::vector<std::string>;
 using vector_int = std::vector<int>;
-using vector_char = std::vector<char>;
-using vector_float = std::vector<float>;
 
 #include <map>
 #include <algorithm>
@@ -18,7 +14,7 @@ using vector_float = std::vector<float>;
 int main()
 {
     vector_str file = import_file("input/d01.txt");
-    std::vector<int> charts;
+    vector_int charts;
     int checkSum = 0;
 
     for (size_t i = 0; i <= file.size(); i++)
