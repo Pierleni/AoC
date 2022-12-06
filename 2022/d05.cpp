@@ -7,11 +7,8 @@
 #include "../libcpp/convert.cpp"
 
 using vector_str = std::vector<std::string>;
-using vector_int = std::vector<int>;
 using vector_char = std::vector<char>;
-using vector_float = std::vector<float>;
 
-#include <map>
 
 int main()
 {
@@ -70,17 +67,15 @@ int main()
         }
     }
     // Print both parts solution
-    std::cout << "Part 1: ";
     for (auto rack : allRacks) {
         part_1 += rack[0];
     }
-    std::cout << part_1 << std::endl;
-
-    std::cout << "Part 2: ";
     for (auto rack : allRacks_v2) {
         part_2 += rack[0];
     }
-    std::cout << part_2;
+
+    std::cout << "Part 1: " << part_1 << std::endl;
+    std::cout << "Part 2: " << part_2;
 
     return 0;
 }
