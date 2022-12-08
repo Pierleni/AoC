@@ -29,8 +29,6 @@ int main()
             if (line[2] == "..") folders.pop_back();
             else folders.push_back(line[2]);
         }
-        else if (line[1] == "ls") 
-            continue;
 
         else if ((line[0] != "$") && (line[0] != "dir")) 
         {
@@ -38,14 +36,10 @@ int main()
             std::string path = "";
             
             for (int i = 0; i < folders.size() +1; i++) {
-            for (int j = 0; j < i; j++) 
-                path += folders[j];
+            for (int j = 0; j < i; j++) path += folders[j];
 
-                if (directories_size.empty()) {
-                    directories_size[path] = size;
-                }
-                else 
-                {
+                if (directories_size.empty()) directories_size[path] = size;
+                else {
                     if (directories_size.find(path) == directories_size.end())
                         directories_size[path] = size;
                     else 
@@ -53,6 +47,8 @@ int main()
                 }
             }       
         }
+        else if (line[1] == "ls") 
+            continue;
     }
     // Part 1  
     int part_1 = 0;
