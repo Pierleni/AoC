@@ -59,6 +59,7 @@ bool is_visible(int y, int x, std::vector<std::vector<int>> &matrix, int HEIGHT,
     are shorter than it */
     bool up, down, left, right;
     up = 1; down = 1; left = 1; right = 1;
+    
     for (size_t ny = 0; ny < y; ny++){
         if (matrix[ny][x] >= matrix[y][x]) up = false;   // not visible
     }
