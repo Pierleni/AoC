@@ -55,7 +55,8 @@ int main()
         bacons.push_back(bacon);
         int raggio = std::abs(sensor.Y - bacon.Y) + std::abs(sensor.X - bacon.X);
         int dist = std::abs(sensor.Y - line_to_check);
-        if (std::abs(sensor.Y - line_to_check) < raggio) {
+
+        if (dist < raggio) {
             std::pair XX = {sensor.X - (raggio - dist), sensor.X + (raggio - dist)};
             for ( int x = XX.first; x<XX.second+1;x++) {
                 if (!baconExist({line_to_check, x}, bacons))
