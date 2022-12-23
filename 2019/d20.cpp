@@ -226,23 +226,6 @@ int main()
             Internal[int_portal[portal.first][0]] = ext_portal[portal.first][0];
         }
     }
-
-    for (auto portal : External) {
-        pt a = portal.first;
-        pt b = portal.second;
-        for (auto p : ext_portal) {
-            if (p.second[0] == a) cout << p.first << '\n';
-        }
-        cout << "External: "<<a.first << ','<<a.second << ' '<<b.first<<','<<b.second<<endl;
-    }
-        for (auto portal : Internal) {
-        pt a = portal.first;
-        pt b = portal.second;
-        for (auto p : int_portal) {
-            if (p.second[0] == a) cout << p.first << '\n';
-        }
-        cout << "Internal: "<<a.first << ','<<a.second << ' '<<b.first<<','<<b.second<<endl;
-    }
    
     int result = bfs(start, end, matrix, AtoB);
     cout << result << endl;
