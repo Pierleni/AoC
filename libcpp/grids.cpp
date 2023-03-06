@@ -24,7 +24,7 @@ void show_matrix(std::vector<std::vector<T>> &matrix)
 {
     for (size_t y = 0; y < matrix.size(); y++)
     {
-        for (size_t x = 0; x < matrix[0].size(); x++)
+        for (size_t x = 0; x < matrix[y].size(); x++)
         {
             std::cout << matrix[y][x] << ' ';
         }
