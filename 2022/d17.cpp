@@ -20,8 +20,6 @@ int W = 7;
 
 struct bPos {int Y,X;};
 
-bPos add(bPos &pos, int dir) {return {pos.Y, pos.X + dir};}
-
 // void display(std::vector<std::vector<int>> &matrix, bPos &pos, block &curr_block) {
 //     // draw block
 //     for (int y=0, yb=pos.Y; y<curr_block.size(); y++,yb++) {
@@ -54,6 +52,7 @@ void resize_matrix(std::vector<std::vector<int>> &matrix, block curr_block, int 
         matrix.erase(matrix.begin());
         upperLevel--;
     }
+
     int diff = upperLevel - curr_block.size();
     while (diff < 3) {
         std::vector<int> v; v.resize(7);
@@ -79,17 +78,14 @@ void moveBlock(bPos &pos, block &curr_block, std::vector<std::vector<int>> &matr
 }
 
 bool freeFall(std::vector<std::vector<int>> &matrix, block &curr_block, bPos &pos) {
-    bool free = true;
     for (int y=0, yb=pos.Y; y<curr_block.size(); y++,yb++) {
         for (int x=0, xb=pos.X; x<curr_block[0].size(); x++, xb++) {
             if (curr_block[y][x] == 1) {
-                if (matrix[yb + 1][xb] >= 8) {
-                    free = false; break;
-                }
+                if (matrix[yb + 1][xb] >= 8) return false;
             }
         }
     }
-    return free;
+    return true;
 }
 
 void landBlock(std::vector<std::vector<int>> &matrix, block &curr_block, bPos &pos, int &upperLevel) {
@@ -146,8 +142,7 @@ int main()
         }
         blk = (blk + 1) % blocks.size();
     }
-
-    std::cout << matrix.size()-1;
+    std::cout << "Part 1: " << matrix.size()-1;
 
     return 0;
 }
