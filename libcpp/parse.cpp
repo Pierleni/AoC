@@ -58,3 +58,11 @@ void replace_char(std::string &line, char old_char, char new_char)
 {
     std::replace(line.begin(), line.end(), old_char, new_char);    
 }
+
+
+// REPLACE CHAR (RETURN STRING)
+std::string return_replace_char(std::string line, char old_char, char new_char)
+{
+    std::replace(line.begin(), line.end(), old_char, new_char);   
+    return line; 
+}
