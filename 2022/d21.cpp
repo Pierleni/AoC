@@ -15,25 +15,26 @@ using vector_float = std::vector<float>;
 
 using namespace std;
 
+// Operational functions
 uint64_t add(uint64_t &a, uint64_t &b) {return a + b;}
 uint64_t sub(uint64_t &a, uint64_t &b) {return a - b;}
 uint64_t mul(uint64_t &a, uint64_t &b) {return a * b;}
 uint64_t div(uint64_t &a, uint64_t &b) {return a / b;}
 
+// Map for operations
 map<string, uint64_t(*)(uint64_t&,uint64_t&)> operation = {
     {"+", &add}, {"-", &sub},
     {"*", &mul}, {"/", &div}
 };
 
-vector<pair<string, vector<string>>> data_or;
 map<string, uint64_t> monkeys;
+vector<pair<string, vector<string>>> data_or;
 
 uint64_t solve_part1() 
 {
     while (monkeys.count("root") == 0) 
     {
-        for (auto &d : data_or)
-        {
+        for (auto &d : data_or) {
             if (monkeys.count(d.first)) continue;
             string a    = d.second[0];
             string op   = d.second[1];
@@ -62,15 +63,13 @@ int main()
         data_or.push_back(pair_temp);
     }
 
-    for (auto &d : data_or)
-    {
-        if (d.second.size() == 1) {
-            uint64_t value = convert_to<uint64_t>(d.second[0]);
-            monkeys[d.first] = value;
-        }
+    for (auto &d : data_or) {
+        if (d.second.size() > 1) continue; 
+        uint64_t value = convert_to<uint64_t>(d.second[0]);
+        monkeys[d.first] = value;
     }
 
     cout << solve_part1();
 
-    return 0;       // not good 1807012018 too low
+    return 0;
 }
