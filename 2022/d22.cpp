@@ -34,8 +34,6 @@ pt curr_pos = {0,0};
 vector_str commands;
 vector<vector_int> matrix;
 
-// funtions
-void bounceFace(pt &p);
 void inBounds1(pt &p);
 
 void show_matrix2(vector<vector_int> &m) {
@@ -147,6 +145,3 @@ void inBounds1(pt &p) {
     if (p.X == matrix[0].size()) p.X = 0;
 }
 
-void bounceFace(pt &p) {
-    
-}
