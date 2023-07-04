@@ -69,7 +69,7 @@ int main()
         monkeys[d.first] = value;
     }
 
-    cout << solve_part1();
+    cout << "\nPart 1: " << solve_part1();
 
     return 0;
 }

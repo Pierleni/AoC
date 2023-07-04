@@ -136,7 +136,7 @@ int main()
         }
     }
 
-    cout << straight("humn", data_rev, monkeys); // 3469704905529
+    cout << "Part 2: " << straight("humn", data_rev, monkeys); // 3469704905529
 
     return 0;
 }
