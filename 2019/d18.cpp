@@ -80,7 +80,6 @@ int bfs(State state, int target) {
             if (islower(c)) {
                 if (find(s.keys.begin(), s.keys.end(), c) == s.keys.end()) {
                     s.keys.push_back(c);
-                    s.print();
                 }
             }
             seen.insert({npos.Y, npos.X, s.keys});
