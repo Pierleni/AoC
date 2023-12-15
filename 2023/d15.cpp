@@ -22,10 +22,7 @@ int main()
     int64_t resultA = 0;
     int64_t resultB = 0;
 
-    for (int i=0; i<256; i++) {
-        Box tmp;
-        B.push_back(tmp);
-    }
+    B.resize(256);
 
     std::vector<std::string> file = import_file( "input/d15.txt" );
     replace(file[0].begin(), file[0].end(),',',' ');
