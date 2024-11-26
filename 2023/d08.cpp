@@ -74,7 +74,6 @@ int main()
         }
         lcms.push_back(stepsA);
     }
-
     show_content(lcms);
 
     return 0;

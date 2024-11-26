@@ -3,12 +3,24 @@
 #include <vector>
 
 
-// CONVERT SINGLE ELEMENT
+// CONVERT SINGLE STRING
 template <class T>
 T convert_to(std::string word)
 {
     T result;
     std::stringstream ss(word);
+    ss >> result;
+    return result;
+}
+
+
+
+// CONVERT SINGLE CHAR
+template <class T>
+T convert_char_to(char c)
+{
+    T result;
+    std::stringstream ss(c);
     ss >> result;
     return result;
 }

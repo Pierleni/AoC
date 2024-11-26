@@ -26,9 +26,6 @@ for line in elements[2].split('\n'):
     for v in values:
         nearbyTickets.append(v)
 
-# print("types", types, '\n')
-# print("yourTickets", yourTicket, '\n')
-# print("nearbyTickets", nearbyTickets, '\n')
 
 for n in nearbyTickets:
     isValid = False

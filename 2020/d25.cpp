@@ -25,9 +25,7 @@ class Device
 	ull loopSize = 0;				// to find
 	int mod = 20201227;
 	
-	Device(const int n) {
-		key = n;
-	}
+	Device(const int n) {key = n;}
 	
 	void findLoopSize() {
 		ull value = 1;
@@ -67,6 +65,5 @@ int main()
 	if (a == b) {
 		cout << "Match! " << a << endl;
 	}
-	
     return 0;
 }

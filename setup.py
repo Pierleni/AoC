@@ -50,16 +50,11 @@ else:
 #include "../libcpp/grids.cpp"
 #include "../libcpp/convert.cpp"
 
-using vector_str = std::vector<std::string>;
-using vector_int = std::vector<int>;
-using vector_char = std::vector<char>;
-using vector_float = std::vector<float>;
-
 using namespace std;
             
 int main()
 {{
-    vector_str file = import_file( "input/d{day}.txt" );
+    std::vector<std::string> file = import_file( "input/d{day}.txt" );
 
     return 0;
 }}""")      
