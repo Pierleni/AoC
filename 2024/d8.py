@@ -1,3 +1,4 @@
+import time
 from collections import defaultdict
 
 data = open("./input/d8.txt",'r').read().splitlines()
@@ -37,4 +38,4 @@ for k, values in antennas.items():
                             antinode2.add((y, x))
 
 print(len(antinodes))
-print(len(antinode2)) 
+print(len(antinode2))
