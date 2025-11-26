@@ -1,6 +1,6 @@
 from collections import deque
 
-data = open("input/d10.txt",'r').read()
+data = open("2024/input/d10.txt",'r').read()
 matrix = [[c for c in line] for line in data.splitlines()]
 starts = []
 

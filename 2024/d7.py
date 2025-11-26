@@ -21,7 +21,7 @@ def isValid(n, l):
 ans1 = 0
 ans2 = 0
 operands = ['+','*']
-with open("input/d7.txt",'r') as f:
+with open("2024/input/d7.txt",'r') as f:
     lines = f.read().splitlines()
     for line in lines:
         result, numbers = line.split(':')
