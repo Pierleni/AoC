@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 from collections import defaultdict
 
-data = open("2024/input/d11.txt",'r').read()
+data = open("./input/d11.txt",'r').read()
 print(data)
 blink = 25
 stones = [n for n in data.split()]

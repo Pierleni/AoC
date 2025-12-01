@@ -2,7 +2,7 @@ import time
 from collections import defaultdict, Counter, deque
 
 start = time.time()
-data = open("2024/input/d9.txt",'r').read()
+data = open("./input/d9.txt",'r').read()
 
 ans = 0
 posId = 1

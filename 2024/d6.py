@@ -1,5 +1,5 @@
 matrix = []
-with open("2024/input/d6.txt",'r') as f:
+with open("./input/d6.txt",'r') as f:
     matrix = [[x for x in line] for line in f.read().splitlines()]
 
 steps = []

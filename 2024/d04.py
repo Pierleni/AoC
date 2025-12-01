@@ -1,4 +1,4 @@
-data = open("2024/input/d4.txt", 'r').read().splitlines()
+data = open("./input/d4.txt", 'r').read().splitlines()
 matrix = [[c for c in line] for line in data]
 
 xmas = "XMAS"

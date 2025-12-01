@@ -1,4 +1,4 @@
-with open("2024/input/d2.txt", 'r') as f:
+with open("./input/d2.txt", 'r') as f:
     matrix = [[int(x) for x in line.split()] for line in f.read().splitlines()]
 
 def is_safe(line):

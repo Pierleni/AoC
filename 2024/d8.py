@@ -1,7 +1,7 @@
 import time
 from collections import defaultdict
 
-data = open("2024/input/d8.txt",'r').read().splitlines()
+data = open(".4/input/d8.txt",'r').read().splitlines()
 m = [[c for c in line] for line in data]
 antennas = defaultdict(list)
 for y in range(len(data)):

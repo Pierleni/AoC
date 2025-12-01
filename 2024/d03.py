@@ -1,6 +1,6 @@
 import re
 
-data = open("2024/input/d3.txt").read()
+data = open("./input/d3.txt").read()
 
 regex = "(mul[(]\d+,\d+[)]|do[(][)]|don't[(][)])" # (mul[(]\d+,\d+[)])
 

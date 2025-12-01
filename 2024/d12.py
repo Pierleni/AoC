@@ -1,6 +1,6 @@
 from collections import defaultdict
 
-data = open("2024/input/d12.txt",'r').read().splitlines()
+data = open("./input/d12.txt",'r').read().splitlines()
 matrix = [[c for c in line]for line in data]
 
 def nbr(y, x, m):

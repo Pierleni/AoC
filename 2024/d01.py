@@ -1,5 +1,5 @@
 left, right = [], []
-with open("2024/input/d1.txt", 'r') as f:
+with open("./input/d1.txt", 'r') as f:
     for line in f.read().splitlines():
         a, b = line.split()
         left.append(int(a))
