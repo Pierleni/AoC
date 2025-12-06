@@ -16,7 +16,6 @@ def merge_ranges(ranges):
 part1 = 0
 part2 = 0
 all_ranges = []
-ids_ranges = set()
 with open("./input/d05.txt", 'r') as f:
         ranges, ingredients = f.read().split("\n\n")
         for rang in ranges.split("\n"):
@@ -28,9 +27,9 @@ with open("./input/d05.txt", 'r') as f:
                         if start <= id <= end:
                                 part1 += 1
                                 break
-        print(part1)
+        print(f"Part 1: {part1}")
 
         merged = merge_ranges(all_ranges)
         for start, end in merged:
                 part2 += (end + 1) - start
-        print(part2)
+        print(f"Part 2: {part2}")
