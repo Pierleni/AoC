@@ -16,7 +16,6 @@ with open("./input/d06.txt", 'r') as f:
         print(part1)
 
 part2 = 0
-matrix = []
 op_pos = []
 with open("./input/d06.txt", 'r') as f:
         data = f.read().splitlines()
